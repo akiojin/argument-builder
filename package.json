@@ -1,5 +1,5 @@
 {
-  "name": "@akiojin/command-builder",
+  "name": "@akiojin/argument-builder",
   "version": "0.1.0",
   "description": "This package implements a class that creates command line parameters.",
   "main": "dist/index.js",
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akiojin/command-builder.git"
+    "url": "git+https://github.com/akiojin/argument-builder.git"
   },
   "keywords": [
-    "keychain",
-    "security"
+    "command",
+    "cli"
   ],
   "author": "akiojin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/akiojin/command-builder/issues"
+    "url": "https://github.com/akiojin/argument-builder/issues"
   },
-  "homepage": "https://github.com/akiojin/command-builder#readme",
+  "homepage": "https://github.com/akiojin/argument-builder#readme",
   "dependencies": {
     "@types/node": "^17.0.21",
     "typescript": "^4.6.2"

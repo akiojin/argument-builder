@@ -1,29 +1,39 @@
-# command-builder
+# argument-builder
 This package implements a class that creates command line parameters.
 
 ## Usage
 ```js
-import { CommandBuilder } from '@akiojin/command-builder'
+import { ArgumentBuilder } from '@akiojin/argument-builder'
 ```
 ```js
-const builder = new CommandBuilder()
-builder.AddCommand('--verbose')
-builder.AddCommand('--file', 'log.txt')
-builder.AddCommand([ '--output', './out' ])
+const builder = new ArgumentBuilder()
+builder.Append('--verbose')
+builder.Append('--file', 'log.txt')
+builder.Append([ '--output', './out' ])
 await execa.execa('foo', builder.Build())
 ```
 
 ## Reference
-### class `CommandBuilder`
-#### `AddCommand(command: string | string[], param: string?): void`
+### class `ArgumentBuilder`
+#### `Append(arg: string | string[], param: string?): void`
 ##### Description
-Add a command.
+Add an argument.
 
 ##### Arguments
 |Name|Type|Description|
 |:--|:--|:--|
-|`command`|`string` \| string[]|Commands to pass to the Unity command line|
+|`arg`|`string` \| string[]|Commands to pass to command line|
 |`param`|`string?`|Parameters to be added to the command|
+
+
+#### `Count(): number`
+##### Description
+Returns the number of arguments added.
+
+##### Return
+|Type|Description|
+|:--|:--|
+|`number`|Number of arguments|
 
 
 #### `Build(): string[]`
@@ -33,4 +43,14 @@ Returns an array of arguments to be passed to the command line.
 ##### Return
 |Type|Description|
 |:--|:--|
-|`string[]`|command array|
+|`string[]`|Argument array|
+
+
+#### `ToString(): string`
+##### Description
+Return arguments as a single space-delimited string
+
+##### Return
+|Type|Description|
+|:--|:--|
+|`string`|Return arguments as a single space-delimited string|

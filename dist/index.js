@@ -2,36 +2,42 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 741:
+/***/ 356:
 /***/ ((__unused_webpack_module, exports) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-class CommandBuilder {
+class ArgumentBuilder {
     constructor() {
         this.args = [];
     }
-    AddCommand(command, param) {
-        if (Array.isArray(command)) {
-            this.args = this.args.concat(command);
+    Append(arg, param) {
+        if (Array.isArray(arg)) {
+            this.args = this.args.concat(arg);
         }
         else {
-            this.args.push(command);
+            this.args.push(arg);
             if (param != null) {
                 this.args.push(param);
             }
         }
     }
+    Count() {
+        return this.args.length;
+    }
     Build() {
         return this.args;
     }
+    ToString() {
+        return this.args.join(' ');
+    }
 }
-exports["default"] = CommandBuilder;
+exports["default"] = ArgumentBuilder;
 
 
 /***/ }),
 
-/***/ 264:
+/***/ 116:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -39,9 +45,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.CommandBuilder = void 0;
-var CommandBuilder_1 = __nccwpck_require__(741);
-Object.defineProperty(exports, "CommandBuilder", ({ enumerable: true, get: function () { return __importDefault(CommandBuilder_1).default; } }));
+exports.ArgumentBuilder = void 0;
+var ArgumentBuilder_1 = __nccwpck_require__(356);
+Object.defineProperty(exports, "ArgumentBuilder", ({ enumerable: true, get: function () { return __importDefault(ArgumentBuilder_1).default; } }));
 
 
 /***/ })
@@ -88,7 +94,7 @@ Object.defineProperty(exports, "CommandBuilder", ({ enumerable: true, get: funct
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __nccwpck_require__(264);
+/******/ 	var __webpack_exports__ = __nccwpck_require__(116);
 /******/ 	module.exports = __webpack_exports__;
 /******/ 	
 /******/ })()
