@@ -1,6 +1,6 @@
 export default class ArgumentBuilder
 {
-    args: string[] = []
+    #args: string[] = []
 
     Append(arg: string): void
     Append(arg: string, param: string): void
@@ -9,28 +9,28 @@ export default class ArgumentBuilder
     Append(arg: string | string[], param?: string): void
     {
         if (Array.isArray(arg)) {
-            this.args = this.args.concat(arg)
+            this.#args = this.#args.concat(arg)
         } else {
-            this.args.push(arg)
+            this.#args.push(arg)
 
             if (param != null) {
-                this.args.push(param)
+                this.#args.push(arg)
             }
         }
     }
 
     Count(): number
     {
-        return this.args.length
+        return this.#args.length
     }
 
     Build(): string[]
     {
-        return this.args
+        return this.#args
     }
 
     ToString(): string
     {
-        return this.args.join(' ')
+        return this.#args.join(' ')
     }
 }

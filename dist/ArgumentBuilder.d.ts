@@ -1,5 +1,5 @@
 export default class ArgumentBuilder {
-    args: string[];
+    #private;
     Append(arg: string): void;
     Append(arg: string, param: string): void;
     Append(args: string[]): void;
