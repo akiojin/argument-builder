@@ -14,7 +14,7 @@ export default class ArgumentBuilder
 			this.#args.push(arg)
 
 			if (param != null) {
-				this.#args.push(arg)
+				this.#args.push(param)
 			}
 		}
 	}
