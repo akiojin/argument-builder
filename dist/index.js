@@ -33,6 +33,7 @@ class ArgumentBuilder {
                 __classPrivateFieldGet(this, _ArgumentBuilder_args, "f").push(param);
             }
         }
+        return this;
     }
     Count() {
         return __classPrivateFieldGet(this, _ArgumentBuilder_args, "f").length;

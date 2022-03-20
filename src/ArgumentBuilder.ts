@@ -2,11 +2,11 @@ export default class ArgumentBuilder
 {
 	#args: string[] = []
 
-	Append(arg: string): void
-	Append(arg: string, param: string): void
-	Append(args: string[]): void
+	Append(arg: string): ArgumentBuilder
+	Append(arg: string, param: string): ArgumentBuilder
+	Append(args: string[]): ArgumentBuilder
 
-	Append(arg: string | string[], param?: string): void
+	Append(arg: string | string[], param?: string): ArgumentBuilder
 	{
 		if (Array.isArray(arg)) {
 			this.#args = this.#args.concat(arg)
@@ -17,6 +17,8 @@ export default class ArgumentBuilder
 				this.#args.push(param)
 			}
 		}
+
+		return this
 	}
 
 	Count(): number

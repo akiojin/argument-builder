@@ -1,8 +1,8 @@
 export default class ArgumentBuilder {
     #private;
-    Append(arg: string): void;
-    Append(arg: string, param: string): void;
-    Append(args: string[]): void;
+    Append(arg: string): ArgumentBuilder;
+    Append(arg: string, param: string): ArgumentBuilder;
+    Append(args: string[]): ArgumentBuilder;
     Count(): number;
     Build(): string[];
     ToString(): string;

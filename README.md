@@ -7,9 +7,10 @@ import { ArgumentBuilder } from '@akiojin/argument-builder'
 ```
 ```js
 const builder = new ArgumentBuilder()
-builder.Append('--verbose')
-builder.Append('--file', 'log.txt')
-builder.Append([ '--output', './out' ])
+builder
+    .Append('--verbose')
+    .Append('--file', 'log.txt')
+    .Append([ '--output', './out' ])
 await execa.execa('foo', builder.Build())
 ```
 
