@@ -16,7 +16,7 @@ await execa.execa('foo', builder.Build())
 
 ## Reference
 ### class `ArgumentBuilder`
-#### `Append(arg: string | string[], param?: string): void`
+#### `Append(arg: string | string[], param?: string): ArgumentBuilder`
 ##### Description
 Add an argument.
 
@@ -25,6 +25,11 @@ Add an argument.
 |:--|:--|:--|
 |`arg`|`string` \| string[]|Commands to pass to command line|
 |`param?`|`string`|Parameters to be added to the command|
+
+##### Return
+|Type|Description|
+|:--|:--|
+|`ArgumentBuilder`|Return this|
 
 
 #### `Count(): number`
