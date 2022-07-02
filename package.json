@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/akiojin/argument-builder#readme",
   "dependencies": {
-    "@types/node": "^17.0.21",
+    "@types/node": "^18.0.0",
     "typescript": "^4.6.2"
   }
 }
