@@ -31,5 +31,5 @@ jobs:
             git config user.name gitbub-actions
             git config user.email action@github.com
             git commit -m 'commit dist'
-            git push
+            git push origin HEAD:main
           fi
