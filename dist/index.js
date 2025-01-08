@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 904:
+/***/ 769:
 /***/ (function(__unused_webpack_module, exports) {
 
 
@@ -45,13 +45,13 @@ class ArgumentBuilder {
         return __classPrivateFieldGet(this, _ArgumentBuilder_args, "f").join(' ');
     }
 }
-exports["default"] = ArgumentBuilder;
 _ArgumentBuilder_args = new WeakMap();
+exports["default"] = ArgumentBuilder;
 
 
 /***/ }),
 
-/***/ 144:
+/***/ 407:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 
@@ -60,7 +60,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ArgumentBuilder = void 0;
-var ArgumentBuilder_1 = __nccwpck_require__(904);
+var ArgumentBuilder_1 = __nccwpck_require__(769);
 Object.defineProperty(exports, "ArgumentBuilder", ({ enumerable: true, get: function () { return __importDefault(ArgumentBuilder_1).default; } }));
 
 
@@ -108,7 +108,7 @@ Object.defineProperty(exports, "ArgumentBuilder", ({ enumerable: true, get: func
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __nccwpck_require__(144);
+/******/ 	var __webpack_exports__ = __nccwpck_require__(407);
 /******/ 	module.exports = __webpack_exports__;
 /******/ 	
 /******/ })()
