@@ -1,6 +1,9 @@
 name: Build
 
-on: push
+on:
+  push:
+    branches-ignore:
+      - main
 
 jobs:
   Build:
@@ -8,6 +11,11 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: npm run build
+      - name: 🔄 Checkout to the branch
+        uses: actions/checkout@v4
+
+      - name: 🍏 Set up Node.js version
+        uses: actions/setup-node@v4
+
+      - name: ⚙️ npm install and build
+        run: npm run build
