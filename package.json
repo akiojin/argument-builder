@@ -1,6 +1,6 @@
 {
   "name": "@akiojin/argument-builder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This package implements a class that creates command line parameters.",
   "main": "dist/index.js",
   "scripts": {
