@@ -21,3 +21,8 @@ jobs:
         uses: akiojin/github-release-github-action@v0
         with:
           GITHUB_TOKEN: ${{ github.token }}
+
+      - name: 🚀 npm publish
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
